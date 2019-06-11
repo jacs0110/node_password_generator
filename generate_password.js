@@ -46,6 +46,10 @@ function generatePassword(options) {
     collection = collection.filter(char => !options.excludeCharacters.includes(char))
   }
 
+  if (collection.length === 0) {
+    return "There is no valid characters in your selections"
+  }
+
   // generate password
   let password = ''
   for (let i = 0; i < options.length; i++) {
