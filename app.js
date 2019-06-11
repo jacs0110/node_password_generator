@@ -10,8 +10,7 @@ app.set('view engine', 'handlebars')
 
 // routes
 app.get('/', (req, res) => {
-  console.log('Express')
-  res.send('Hello world')
+  res.render('index')
 })
 
 // listening on port 
